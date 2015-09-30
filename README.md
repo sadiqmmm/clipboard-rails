@@ -42,7 +42,7 @@ $(document).ready(function(){
 });
 ```
 
-Note: Here i am using gem 'jquery-turbolinks' for using the jquery $(document).ready function 
+*Note:* Here i am using `gem 'jquery-turbolinks'` for using the jquery $(document).ready function 
 
 Add this sample code to your template file like `index.html.erb`
 
@@ -56,7 +56,9 @@ Add this sample code to your template file like `index.html.erb`
 </button>
 ```
 
-### For Full documentation read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/
+## Full documentation 
+
+Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/
 
 ## Development
 
