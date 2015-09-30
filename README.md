@@ -1,4 +1,5 @@
 # clipboard-rails
+[![Gem Version](https://badge.fury.io/rb/clipboard-rails.svg)](http://badge.fury.io/rb/clipboard-rails)
 
 clipboard-rails gem is the integration of clipboard.js javascript library for your Rails 4 application.
 
