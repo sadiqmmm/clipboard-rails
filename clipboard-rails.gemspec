@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sadiqmmm@gmail.com"]
 
   spec.summary       = spec.description
-  spec.description   = 'This gem provides the clipboard.js Javascript library for your Rails 3 and 4 application.'
+  spec.description   = 'This gem provides the clipboard.js Javascript library for your Rails 3 and Rails 4 application.'
   spec.homepage      = 'https://github.com/sadiqmmm/clipboard-rails'
   spec.license       = "MIT"
 
