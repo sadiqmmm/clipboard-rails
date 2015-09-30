@@ -29,7 +29,34 @@ Now you need to edit your `app/assets/javascripts/application.js` file and add t
 
 ## Usage
 
-Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/
+Here is the example working code to test with your Rails application.
+
+Add this sample code to your `app/assets/javascripts/application.js` file
+
+``` javascript
+$(document).ready(function(){  
+  
+  var clip = new Clipboard('.btn');
+  console.log(clip);
+	
+});
+```
+
+Note: Here i am using gem 'jquery-turbolinks' for using the jquery $(document).ready function 
+
+Add this sample code to your template file like `index.html.erb`
+
+``` html
+<!-- Target -->
+<textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+<!-- Trigger -->
+<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+    Cut to clipboard
+</button>
+```
+
+### For Full documentation read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/
 
 ## Development
 
