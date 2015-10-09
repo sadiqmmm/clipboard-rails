@@ -141,12 +141,12 @@ exports.unbind = function(el, type, fn, capture){
 };
 },{}],5:[function(require,module,exports){
 function E () {
-  // Keep this empty so it's easier to inherit from
+	// Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
 }
 
 E.prototype = {
-  on: function (name, callback, ctx) {
+	on: function (name, callback, ctx) {
     var e = this.e || (this.e = {});
     
     (e[name] || (e[name] = [])).push({
@@ -281,7 +281,7 @@ var ClipboardAction = (function () {
         this.fakeElem = document.createElement('textarea');
         this.fakeElem.style.position = 'absolute';
         this.fakeElem.style.left = '-9999px';
-        this.fakeElem.style.top = document.body.scrollTop + 'px';
+        this.fakeElem.style.top = (window.pageYOffset || document.documentElement.scrollTop) + 'px';
         this.fakeElem.setAttribute('readonly', '');
         this.fakeElem.value = this.text;
         this.selectedText = this.text;
