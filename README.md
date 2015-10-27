@@ -6,6 +6,8 @@ clipboard-rails gem is the integration of clipboard.js javascript library for yo
 clipboard.js is a modern approach to copy text to clipboard No Flash. No dependencies. Just 2kb
 source: https://github.com/zenorocha/clipboard.js
 
+Ruby gems url: https://rubygems.org/gems/clipboard-rails
+
 ## Installation
 
 Add this line to your application's Gemfile:
