@@ -1,5 +1,5 @@
 /*!
- * clipboard.js v1.5.10
+ * clipboard.js v1.5.12
  * https://zenorocha.github.io/clipboard.js
  *
  * Licensed MIT © Zeno Rocha
@@ -283,12 +283,12 @@ module.exports = select;
 
 },{}],7:[function(require,module,exports){
 function E () {
-	// Keep this empty so it's easier to inherit from
+    // Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
 }
 
 E.prototype = {
-	on: function (name, callback, ctx) {
+    on: function (name, callback, ctx) {
     var e = this.e || (this.e = {});
 
     (e[name] || (e[name] = [])).push({
@@ -448,9 +448,10 @@ module.exports = E;
 
             this.removeFake();
 
-            this.fakeHandler = document.body.addEventListener('click', function () {
+            this.fakeHandlerCallback = function () {
                 return _this.removeFake();
-            });
+            };
+            this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
 
             this.fakeElem = document.createElement('textarea');
             // Prevent zooming on iOS
@@ -460,7 +461,7 @@ module.exports = E;
             this.fakeElem.style.padding = '0';
             this.fakeElem.style.margin = '0';
             // Move element out of screen horizontally
-            this.fakeElem.style.position = 'fixed';
+            this.fakeElem.style.position = 'absolute';
             this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
             // Move element to the same position vertically
             this.fakeElem.style.top = (window.pageYOffset || document.documentElement.scrollTop) + 'px';
@@ -475,8 +476,9 @@ module.exports = E;
 
         ClipboardAction.prototype.removeFake = function removeFake() {
             if (this.fakeHandler) {
-                document.body.removeEventListener('click');
+                document.body.removeEventListener('click', this.fakeHandlerCallback);
                 this.fakeHandler = null;
+                this.fakeHandlerCallback = null;
             }
 
             if (this.fakeElem) {
