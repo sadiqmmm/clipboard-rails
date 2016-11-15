@@ -650,7 +650,7 @@ module.exports = E;
 
             _this.resolveOptions(options);
             _this.listenClick(trigger);
-			this.clipboard_element = $(trigger)[0];
+		    this.clipboard_element = $(trigger)[0];
             return _this;
         }
 
