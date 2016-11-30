@@ -36,11 +36,36 @@ Here is the example working code to test with your Rails application.
 Add this sample code to your `app/assets/javascripts/application.js` file
 
 ``` javascript
-$(document).ready(function(){  
-  
-  var clip = new Clipboard('.btn');
-  console.log(clip);
+$(document).on('turbolinks:load', function() {
 	
+	// Run Clipboard
+
+	var copyCode = new Clipboard('.copy-btn');
+
+	// On success:
+	// - Change the "Copy" text to "Copied".
+	// - Swap it to "Copy" in 2s.	
+	
+	copyCode.on('success', function(event) {
+	//	event.clearSelection();
+		event.trigger.textContent = 'Copied';
+		window.setTimeout(function() {
+			event.trigger.textContent = 'Copy';
+		}, 2000);
+		 
+	});
+
+	// On error (Safari):
+	// - Change the  "Press Ctrl+C to copy"
+	// - Swap it to "Copy" in 2s.
+	
+	copyCode.on('error', function(event) { 
+		event.trigger.textContent = 'Press "Ctrl + C" to copy';
+		window.setTimeout(function() {
+			event.trigger.textContent = 'Copy';
+		}, 5000);
+	});
+
 });
 ```
 
@@ -53,7 +78,7 @@ Add this sample code to your template file like `index.html.erb`
 <textarea id="bar">Mussum ipsum cacilds...</textarea>
 
 <!-- Trigger -->
-<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+<button class="copy-btn" data-clipboard-target="#bar">
     Cut to clipboard
 </button>
 ```
