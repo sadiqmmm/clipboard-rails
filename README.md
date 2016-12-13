@@ -61,7 +61,7 @@ Add this sample code to your template file like `index.html.erb`
 
 Additionally, you can define a **data-clipboard-action** attribute to specify if you want to either **copy** or **cut** content.
 
-If you omit this attribute, copy will be used by default.
+If you omit this attribute, **copy** will be used by default.
 
 ## Full documentation 
 
