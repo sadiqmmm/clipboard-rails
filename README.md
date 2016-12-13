@@ -1,7 +1,7 @@
 # clipboard-rails
 [![Gem Version](https://badge.fury.io/rb/clipboard-rails.svg)](http://badge.fury.io/rb/clipboard-rails)
 
-clipboard-rails gem is the integration of clipboard.js javascript library for your Rails 4 application.
+clipboard-rails gem is the integration of clipboard.js javascript library for your Rails 4 and Rails 5 applications.
 
 clipboard.js is a modern approach to copy text to clipboard No Flash. No dependencies. Just 2kb
 source: https://github.com/zenorocha/clipboard.js
@@ -38,7 +38,7 @@ Add this sample code to your `app/assets/javascripts/application.js` file
 ``` javascript
 $(document).ready(function(){  
   
-  var clip = new Clipboard('.btn');
+  var clip = new Clipboard('.clipboard-btn');
   console.log(clip);
 	
 });
@@ -53,10 +53,14 @@ Add this sample code to your template file like `index.html.erb`
 <textarea id="bar">Mussum ipsum cacilds...</textarea>
 
 <!-- Trigger -->
-<button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
     Cut to clipboard
 </button>
 ```
+## Note
+Additionally, you can define a data-clipboard-action attribute to specify if you want to either copy or cut content.
+
+If you omit this attribute, copy will be used by default.
 
 ## Full documentation 
 
@@ -70,7 +74,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sadiqmmm/clipboard-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sadiqmmm/clipboard-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
