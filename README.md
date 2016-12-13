@@ -57,14 +57,15 @@ Add this sample code to your template file like `index.html.erb`
     Cut to clipboard
 </button>
 ```
-## Note
-Additionally, you can define a data-clipboard-action attribute to specify if you want to either copy or cut content.
+## Additional information
+
+Additionally, you can define a **data-clipboard-action** attribute to specify if you want to either **copy** or **cut** content.
 
 If you omit this attribute, copy will be used by default.
 
 ## Full documentation 
 
-Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/
+Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/ for full usage information.
 
 ## Development
 
