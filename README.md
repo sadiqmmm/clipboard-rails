@@ -58,7 +58,7 @@ Add this sample code to your template file like `index.html.erb`
 </button>
 ```
 
-## Add Tooltips + Highlight Animation With Clipboard.js on Button click using Bootstrap Tooltip
+## Add Tooltips + Highlight animation with Clipboard.js on button click using Bootstrap Tooltip
 
 ``` javascript
 
