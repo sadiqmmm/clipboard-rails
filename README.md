@@ -57,6 +57,51 @@ Add this sample code to your template file like `index.html.erb`
     Cut to clipboard
 </button>
 ```
+
+## Add Tooltips + Highlight Animation With Clipboard.js on Button click using Bootstrap Tooltip
+
+``` javascript
+
+// Tooltip
+
+$('button').tooltip({
+  trigger: 'click',
+  placement: 'bottom'
+});
+
+function setTooltip(btn, message) {
+  $(btn).tooltip('hide')
+    .attr('data-original-title', message)
+    .tooltip('show');
+}
+
+function hideTooltip(btn) {
+  setTimeout(function() {
+    $(btn).tooltip('hide');
+  }, 1000);
+}
+
+// Clipboard
+
+var clipboard = new Clipboard('button');
+
+clipboard.on('success', function(e) {
+  setTooltip(e.trigger, 'Copied!');
+  hideTooltip(e.trigger);
+});
+
+clipboard.on('error', function(e) {
+  setTooltip(e.trigger, 'Failed!');
+  hideTooltip(e.trigger);
+});
+```
+
+``` html
+<!-- Animation on buttons HTML -->
+<button class="btn btn-primary" data-clipboard-text="It worked!">Click me</button>
+<button class="btn btn-primary" data-clipboard-text="It worked again!">Click me</button>
+```
+
 ## Additional information
 
 Additionally, you can define a **data-clipboard-action** attribute to specify if you want to either **copy** or **cut** content.
