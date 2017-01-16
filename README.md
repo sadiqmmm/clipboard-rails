@@ -57,8 +57,20 @@ Add this sample code to your template file like `index.html.erb`
     Cut to clipboard
 </button>
 ```
+## Additional information
 
-## Add Tooltips + Highlight animation with Clipboard.js on button click using Bootstrap Tooltip
+Additionally, you can define a **data-clipboard-action** attribute to specify if you want to either **copy** or **cut** content.
+
+If you omit this attribute, **copy** will be used by default.
+
+## Full documentation 
+
+Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/ for full usage information.
+
+
+## Add Tooltips + Highlight animation: 
+
+with Clipboard.js on button click using Bootstrap Tooltip
 
 ``` javascript
 
@@ -102,15 +114,7 @@ clipboard.on('error', function(e) {
 <button class="btn btn-primary" data-clipboard-text="It worked again!">Click me</button>
 ```
 
-## Additional information
 
-Additionally, you can define a **data-clipboard-action** attribute to specify if you want to either **copy** or **cut** content.
-
-If you omit this attribute, **copy** will be used by default.
-
-## Full documentation 
-
-Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js/ for full usage information.
 
 ## Development
 
