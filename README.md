@@ -70,7 +70,7 @@ Read the clipboard.js documentation here http://zenorocha.github.io/clipboard.js
 
 ## Add Tooltips + Highlight animation: 
 
-with Clipboard.js on button click using Bootstrap Tooltip
+Add Tooltips + Highlight animation with Clipboard.js on button click using Bootstrap Tooltip
 
 ``` javascript
 
