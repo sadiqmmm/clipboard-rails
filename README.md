@@ -24,6 +24,8 @@ Or install it yourself as:
 
     $ gem install clipboard-rails
 
+Note: After adding the gem to your gem file and running the bundle, restart rails server.
+
 Now you need to edit your `app/assets/javascripts/application.js` file and add the following line:
 ``` javascript
 //= require clipboard
@@ -54,7 +56,7 @@ Add this sample code to your template file like `index.html.erb`
 
 <!-- Trigger -->
 <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
-    Cut to clipboard
+    Copy to clipboard
 </button>
 ```
 ## Additional information
