@@ -40,8 +40,8 @@ Add this sample code to your `app/assets/javascripts/application.js` file
 ``` javascript
 $(document).ready(function(){  
   
-  var clip = new Clipboard('.clipboard-btn');
-  console.log(clip);
+  var clipboard = new Clipboard('.clipboard-btn');
+  console.log(clipboard);
 	
 });
 ```
@@ -78,7 +78,7 @@ Add Tooltips + Highlight animation with Clipboard.js on button click using Boots
 
 // Tooltip
 
-$('button').tooltip({
+$('clipboard-btn').tooltip({
   trigger: 'click',
   placement: 'bottom'
 });
@@ -97,7 +97,7 @@ function hideTooltip(btn) {
 
 // Clipboard
 
-var clipboard = new Clipboard('button');
+var clipboard = new Clipboard('.clipboard-btn');
 
 clipboard.on('success', function(e) {
   setTooltip(e.trigger, 'Copied!');
