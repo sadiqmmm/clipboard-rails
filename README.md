@@ -78,7 +78,7 @@ Add Tooltips + Highlight animation with Clipboard.js on button click using Boots
 
 // Tooltip
 
-$('clipboard-btn').tooltip({
+$('.clipboard-btn').tooltip({
   trigger: 'click',
   placement: 'bottom'
 });
@@ -111,9 +111,16 @@ clipboard.on('error', function(e) {
 ```
 
 ``` html
-<!-- Animation on buttons HTML -->
-<button class="btn btn-primary" data-clipboard-text="It worked!">Click me</button>
-<button class="btn btn-primary" data-clipboard-text="It worked again!">Click me</button>
+<!-- Example 1: Animation on single button HTML source-->
+<button class="clipboard-btn btn btn-primary" data-clipboard-text="It worked!">Click me</button>
+
+<!-- Example 2: with Target -->
+<textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+<!-- Trigger -->
+<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
+    Copy to clipboard
+</button>
 ```
 
 
