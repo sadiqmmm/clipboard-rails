@@ -111,10 +111,13 @@ clipboard.on('error', function(e) {
 ```
 
 ``` html
-<!-- Example 1: Animation on single button HTML source-->
+<!-- Example 1: Animation with single button HTML source-->
 <button class="clipboard-btn btn btn-primary" data-clipboard-text="It worked!">Click me</button>
 
-<!-- Example 2: with Target -->
+```
+
+``` html
+<!-- Example 2: with Target source -->
 <textarea id="bar">Mussum ipsum cacilds...</textarea>
 
 <!-- Trigger -->
